@@ -49,3 +49,17 @@ $ commonjs --src ./path/to/javascripts --dest ./path/to/js --client
 </script>
 ```
 
+## Lazy-loading extra scripts
+
+```javascript
+require.load('/foo', '/bar', '/baz').then(function() {
+	var foo = require('foo');
+	var bar = require('bar');
+	var baz = require('baz');
+
+	foo.doStuffWith(bar.foo(), baz.foo());
+});
+```
+
+
+

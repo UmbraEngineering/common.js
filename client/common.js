@@ -140,6 +140,8 @@
 	// Loads a JavaScript file async if it is not already loaded. The given
 	// {files} must be absolute paths.
 	// 
+	// @param {files...} the files to load
+	// 
 	require.load = function() {
 		var promise = require.load.defer();
 		var files = Array.prototype.slice.call(arguments);
@@ -154,6 +156,10 @@
 			}
 
 			file = require.dir + file;
+
+			if (file.slice(-3) !== '.js') {
+				file += '.js';
+			}
 
 			// Create the script tag
 			var script = require.load.createScript({
