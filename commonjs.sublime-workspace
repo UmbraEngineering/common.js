@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"outpu",
+				"outputMode"
+			],
+			[
+				"out",
+				"outputMode"
+			],
+			[
+				"wrap",
+				"wrapModule"
+			],
+			[
+				"file",
+				"fileSegments"
+			],
+			[
+				"module",
+				"moduleSource"
+			],
+			[
 				"place",
 				"placeholderPolyfill"
 			]
@@ -11,6 +31,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "lib/index.js",
+			"settings":
+			{
+				"buffer_size": 1882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/james/Desktop/commonjs-sandbox/index.html",
+			"settings":
+			{
+				"buffer_size": 274,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/wrap-module.js",
+			"settings":
+			{
+				"buffer_size": 1172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bin/main.js",
+			"settings":
+			{
+				"buffer_size": 976,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/common.js",
+			"settings":
+			{
+				"buffer_size": 3979,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -39,6 +99,14 @@
 	},
 	"file_history":
 	[
+		"/home/james/Desktop/projects/umbra/commonjs/readme.md",
+		"/home/james/Desktop/commonjs-sandbox/js/bar.js",
+		"/home/james/Desktop/projects/umbra/commonjs/package.json",
+		"/home/james/Desktop/commonjs-sandbox/npm-debug.log",
+		"/home/james/Desktop/commonjs-sandbox/javascripts/bar.js",
+		"/home/james/Desktop/commonjs-sandbox/javascripts/dir/foo.js",
+		"/home/james/Desktop/projects/umbra/commonjs/bin/main.js",
+		"/home/james/Desktop/projects/umbra/commonjs/lib/index.js",
 		"/home/james/Desktop/projects/greatvines/gvp/mobile/ios/GreatVines Mobile/www/app/controllers/homeController.js",
 		"/home/james/Desktop/projects/greatvines/gvp/mobile/Vagrantfile",
 		"/home/james/Desktop/projects/umbra/Placeholder/src/simple.js",
@@ -99,8 +167,145 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "lib/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1882,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1737,
+								1737
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 896.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/james/Desktop/commonjs-sandbox/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/wrap-module.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								442,
+								442
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "bin/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								968,
+								968
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 18.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/common.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2105,
+								2105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

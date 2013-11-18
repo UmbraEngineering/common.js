@@ -64,7 +64,7 @@
 			// Absolute path (relative to given JavaScript root directory)
 			//   eg. require('/module');
 			case '/':
-				return require.exists(file) ? file : null;
+				return modulePath(file);
 			break;
 			
 			// Relative path
@@ -84,7 +84,7 @@
 				}
 
 				file = segments.join('/');
-				return require.exists(file) ? file : null;
+				return modulePath(file);
 			break;
 			
 			// Just module name
@@ -96,12 +96,26 @@
 						dir += '/';
 					}
 					var resolved = dir + file;
-					if (require.exists(resolved)) {
+					if (resolved = modulePath(resolved)) {
 						return resolved;
 					}
 				}
 				return null;
 			break;
+		}
+
+		function modulePath(file) {
+			if (require.exists(file)) {
+				return file;
+			}
+
+			file = file.slice(0, -3) + '/index.js';
+
+			if (require.exists(file)) {
+				return file;
+			}
+
+			return null;
 		}
 	};
 
