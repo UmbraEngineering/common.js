@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"module",
+				"modulePath"
+			],
+			[
 				"outpu",
 				"outputMode"
 			],
@@ -18,10 +22,6 @@
 			[
 				"file",
 				"fileSegments"
-			],
-			[
-				"module",
-				"moduleSource"
 			],
 			[
 				"place",
@@ -67,7 +67,7 @@
 			"file": "client/common.js",
 			"settings":
 			{
-				"buffer_size": 3979,
+				"buffer_size": 4153,
 				"line_ending": "Unix"
 			}
 		}
@@ -99,8 +99,8 @@
 	},
 	"file_history":
 	[
-		"/home/james/Desktop/projects/umbra/commonjs/readme.md",
 		"/home/james/Desktop/commonjs-sandbox/js/bar.js",
+		"/home/james/Desktop/projects/umbra/commonjs/readme.md",
 		"/home/james/Desktop/projects/umbra/commonjs/package.json",
 		"/home/james/Desktop/commonjs-sandbox/npm-debug.log",
 		"/home/james/Desktop/commonjs-sandbox/javascripts/bar.js",
@@ -167,7 +167,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -189,7 +189,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 896.0,
@@ -237,14 +238,15 @@
 						"selection":
 						[
 							[
-								442,
-								442
+								711,
+								711
 							]
 						],
 						"settings":
 						{
 							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -271,10 +273,11 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 18.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -285,23 +288,24 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3979,
+						"buffer_size": 4153,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2105,
-								2105
+								2467,
+								2467
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1386.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -356,11 +360,15 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"~/Desktop/projects/umbra/cloak-dagger/cloak-dagger.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
