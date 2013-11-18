@@ -5,7 +5,7 @@ A CommonJS preprocessor that builds you CommonJS style app into code the browser
 ## Install
 
 ```bash
-$ npm install commonjs-preprocessor
+$ npm install common.js
 ```
 
 ## Usage
