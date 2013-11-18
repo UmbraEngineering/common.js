@@ -11,16 +11,142 @@
 	// 
 	// The core module loading function
 	// 
-	// @param {module} the module path to load
-	// @param {from} the path to resolve from relatively
+	// @param {file} the module path to load
+	// @param {from} the module requesting the require
 	// 
-	var require = window.require = function(module, from) {
-		// 
+	var require = window.require = function(file, from) {
+		var module = require.lookup(file, from);
+		if (from) {
+			from.children.push(module);
+		}
+		if (! module.loaded) {
+			if (from) {
+				module.parent = from;
+			}
+			module.call();
+		}
+		return module.exports;
 	};
 
 	// 
-	// This is where modules are stored.
+	// Looks up and returns a module
 	// 
-	require.__modules = { };
+	// @param {file} the module path to load
+	// @param {from} the module requesting the lookup
+	// 
+	require.lookup = function(file, from) {
+		return require._modules[require.resolve(file, from)];
+	};
+
+	// 
+	// Paths to search for non-relative modules. By default, that just
+	// looks them up from the root JavaScript directory. These should
+	// all begin with a slash "/".
+	// 
+	require.paths = [ '/' ];
+
+	// 
+	// Resolves a given {file} path and {from} module to get an exact
+	// lookup path for the requested module
+	// 
+	// @param {file} the module path to load
+	// @param {from} the module requesting the resolve
+	// 
+	require.resolve = function(file, from) {
+		switch (file.charAt(0)) {
+			// Absolute path (relative to given JavaScript root directory)
+			//   eg. require('/module');
+			case '/':
+				return require.exists(file) ? file : null;
+			break;
+			
+			// Relative path
+			//   eg. require('./module');
+			case '.':
+				file = file.split('/');
+				
+				var dir = from ? from.dirname : '/';
+				var segments = dir.split('/').slice(1);
+				
+				for (var i = 0, c = file.length; i < c; i++) {
+					switch (file[i]) {
+						case '.': /* pass */ break;
+						case '..': segments.pop(); break;
+						default: segments.push(file[i]); break;
+					}
+				}
+
+				file = '/' + segments.join('/');
+				return require.exists(file) ? file : null;
+			break;
+			
+			// Just module name
+			//   eg. require('module');
+			default:
+				for (var i = 0, c = require.paths.length; i < c; i++) {
+					var dir = require.paths[i];
+					if (dir.charAt(dir.length - 1) !== '/') {
+						dir += '/';
+					}
+					var resolved = dir + file;
+					if (require.exists(resolved)) {
+						return resolved;
+					}
+				}
+				return null;
+			break;
+		}
+	};
+
+	// 
+	// This is where modules are stored
+	// 
+	// require._modules[*] = {
+	//   loaded: Bool,
+	//   exports: Mixed,
+	//   filename: String,
+	//   require: Function,
+	//   parent: module,
+	//   children: [module],
+	//   call: Function
+	// }
+	// 
+	require._modules = { };
+
+	// 
+	// Determine if the given module exists. We use {hasOwnProperty} here to be extra
+	// careful, but it should never actually be an issue as all of the module property
+	// names should begin with a slash, and if anyone is defining new prototype properties
+	// that start with a slash, they deserve what is coming to them...
+	// 
+	// @param {file} an absolute module path
+	// 
+	require.exists = (require._modules.hasOwnProperty
+		? function(file) {
+			return require._modules.hasOwnProperty(file);
+		}
+		: function(file) {
+			return (file in require._modules[file]);
+		});
+
+	// 
+	// Return a copy of {require} that is bound to the scope of a module. This is
+	// used to create the copy store on modules at {module.require}.
+	// 
+	// @param {module} the module object to bind to
+	// 
+	require._bind = function(module) {
+		var result = function(file, from) {
+			return require(file, from || module);
+		};
+		result.lookup = function(file, from) {
+			return require.lookup(file, from || module);
+		};
+		result.resolve = function(file, from) {
+			return require.resolve(file, from || module);
+		};
+		result._modules = require._modules;
+		return result;
+	};
 
 }(window));

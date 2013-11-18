@@ -4,7 +4,7 @@
   "description": "A CommonJS preprocessor and client-side lib",
   "main": "lib/index.js",
   "bin": {
-    "common.js": "main.js"
+    "commonjs": "main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,11 @@
   ],
   "author": "James Brumond <james@jbrumond.me> (http://www.jbrumond.me)",
   "license": "MIT",
-  "readmeFilename": "readme.md"
+  "readmeFilename": "readme.md",
+  "dependencies": {
+    "wrench": "~1.5.4",
+    "async": "~0.2.9",
+    "commander": "~2.0.0",
+    "pkg": "0.0.1-1"
+  }
 }
