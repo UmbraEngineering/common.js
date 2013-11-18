@@ -33,15 +33,15 @@ exports.doTheThing = function() {
 #### Step 2: Build you code using commonjs-preprocessor
 
 ```bash
-$ commonjs --src ./path/to/javascripts --dest ./path/to/compiled-javascripts
+$ commonjs --src ./path/to/javascripts --dest ./path/to/js --client
 ```
 
 #### Step 3: Include the modules into your app and use them
 
 ```html
-<script src="common.js"></script>
-<script src="compiled-javascripts/foo.js"></script>
-<script src="compiled-javascripts/bar.js"></script>
+<script src="js/common.js"></script>
+<script src="js/foo.js"></script>
+<script src="js/bar.js"></script>
 <script>
 	var bar = require('bar');
 
