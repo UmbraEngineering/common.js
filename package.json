@@ -23,6 +23,6 @@
   "dependencies": {
     "wrench": "~1.5.4",
     "async": "~0.2.9",
-    "commander": "~2.0.0",
+    "commander": "~2.0.0"
   }
 }
