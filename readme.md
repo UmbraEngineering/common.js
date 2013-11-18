@@ -33,7 +33,7 @@ exports.doTheThing = function() {
 #### Step 2: Build you code using commonjs-preprocessor
 
 ```bash
-$ commonjs ./path/to/javascripts ./path/to/compiled-javascripts
+$ commonjs --src ./path/to/javascripts --dest ./path/to/compiled-javascripts
 ```
 
 #### Step 3: Include the modules into your app and use them
