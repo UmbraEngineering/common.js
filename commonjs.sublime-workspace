@@ -1,0 +1,180 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"place",
+				"placeholderPolyfill"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/james/Desktop/projects/greatvines/gvp/mobile/ios/GreatVines Mobile/www/app/controllers/homeController.js",
+		"/home/james/Desktop/projects/greatvines/gvp/mobile/Vagrantfile",
+		"/home/james/Desktop/projects/umbra/Placeholder/src/simple.js",
+		"/home/james/Desktop/projects/short-id/lib/index.js",
+		"/home/james/Desktop/projects/short-id/lib/stores/memory.js",
+		"/home/james/Desktop/projects/short-id/lib/stores/_base.js",
+		"/home/james/.config/sublime-text-3/Packages/User/comment.sublime-snippet",
+		"/home/james/Desktop/projects/short-id/lib/stores/redis.js",
+		"/home/james/Desktop/projects/nw-benefits-solution/javascripts/main.js",
+		"/home/james/Desktop/projects/nw-benefits-solution/templates/individual/quotes.hbs",
+		"/home/james/Desktop/projects/nw-benefits-solution/templates/_head.hbs",
+		"/home/james/Desktop/projects/nw-benefits-solution/templates/individual/qualify.hbs",
+		"/home/james/Desktop/projects/nw-benefits-solution/grunt.js",
+		"/home/james/Desktop/projects/nw-benefits-solution/javascripts/slider.js",
+		"/home/james/Desktop/projects/nw-benefits-solution/javascripts/navigation.js",
+		"/home/james/Desktop/projects/nw-benefits-solution/build/javascripts/main.js",
+		"/home/james/Desktop/projects/nw-benefits-solution/stylesheets/styles.css",
+		"/home/james/Desktop/projects/nw-benefits-solution/templates/individual/index.hbs",
+		"/home/james/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/james/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/james/.config/sublime-text-2/Packages/HTML/HTML.tmLanguage",
+		"/home/james/.config/sublime-text-3/Packages/User/Handlebars/Handlebars.tmLanguage",
+		"/home/james/.config/sublime-text-2/Packages/HTML/Comments.tmPreferences",
+		"/home/james/.config/sublime-text-3/Packages/User/Handlebars/Comments.tmPreferences"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"image",
+			"ie"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "commonjs.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 216.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
