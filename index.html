@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Common.js : A CommonJS preprocessor that builds you CommonJS style app into code the browser can use." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Common.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/UmbraEngineering/common.js">View on GitHub</a>
+
+          <h1 id="project_title">Common.js</h1>
+          <h2 id="project_tagline">A CommonJS preprocessor that builds you CommonJS style app into code the browser can use.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/UmbraEngineering/common.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/UmbraEngineering/common.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="commonjs-for-the-browser" class="anchor" href="#commonjs-for-the-browser"><span class="octicon octicon-link"></span></a>CommonJS For The Browser</h1>
+
+<p>A CommonJS preprocessor that builds you CommonJS style app into code the browser can use.</p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>npm install common.js
+</pre></div>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h4>
+<a name="step-1-write-your-javascript" class="anchor" href="#step-1-write-your-javascript"><span class="octicon octicon-link"></span></a>Step 1: Write your JavaScript</h4>
+
+<h6>
+<a name="foojs" class="anchor" href="#foojs"><span class="octicon octicon-link"></span></a>foo.js</h6>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+
+<h6>
+<a name="barjs" class="anchor" href="#barjs"><span class="octicon octicon-link"></span></a>bar.js</h6>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">);</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">doTheThing</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">foo</span><span class="p">();</span>
+<span class="p">};</span>
+</pre></div>
+
+<h4>
+<a name="step-2-build-you-code-using-commonjs-preprocessor" class="anchor" href="#step-2-build-you-code-using-commonjs-preprocessor"><span class="octicon octicon-link"></span></a>Step 2: Build you code using commonjs-preprocessor</h4>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>commonjs --src ./path/to/javascripts --dest ./path/to/js --client
+</pre></div>
+
+<h4>
+<a name="step-3-include-the-modules-into-your-app-and-use-them" class="anchor" href="#step-3-include-the-modules-into-your-app-and-use-them"><span class="octicon octicon-link"></span></a>Step 3: Include the modules into your app and use them</h4>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/common.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/foo.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/bar.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+    <span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">);</span>
+
+    <span class="nx">bar</span><span class="p">.</span><span class="nx">doTheThing</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+<h3>
+<a name="command-line-usage" class="anchor" href="#command-line-usage"><span class="octicon octicon-link"></span></a>Command-line Usage</h3>
+
+<pre><code>Usage: commonjs [options]
+
+Options:
+
+  -h, --help         output usage information
+  -V, --version      output the version number
+  -s, --src &lt;src&gt;    Source directory
+  -d, --dest &lt;dest&gt;  Destination directory
+  --client [client]  Output a common.js client script
+  -v, --verbose      Verbose output
+  -q, --quiet        Quite running mode (no output)
+</code></pre>
+
+<h2>
+<a name="how-does-it-work-internally" class="anchor" href="#how-does-it-work-internally"><span class="octicon octicon-link"></span></a>How Does It Work Internally</h2>
+
+<p>The common.js preprocessor works by wrapping each of your JavaScript files in an extra function call which defines all the necessary bits for a CommonJS module (such as the <code>module</code> and <code>exports</code> variables). A compiled module looks something like this (except this has been cleaned up for reading):</p>
+
+<div class="highlight highlight-javascript"><pre><span class="p">;</span>
+<span class="nx">require</span><span class="p">.</span><span class="nx">_modules</span><span class="p">[</span><span class="s2">"/bar.js"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">__filename</span> <span class="o">=</span> <span class="s2">"/bar.js"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">__dirname</span> <span class="o">=</span> <span class="s2">"/"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">loaded</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">exports</span><span class="o">:</span> <span class="p">{},</span>
+        <span class="nx">filename</span><span class="o">:</span> <span class="nx">__filename</span><span class="p">,</span>
+        <span class="nx">dirname</span><span class="o">:</span> <span class="nx">__dirname</span><span class="p">,</span>
+        <span class="nx">require</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nx">call</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">require</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">require</span><span class="p">;</span>
+            <span class="nx">module</span><span class="p">.</span><span class="nx">loaded</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="nx">module</span><span class="p">.</span><span class="nx">call</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span>
+            <span class="nx">__module__</span><span class="p">();</span>
+        <span class="p">},</span>
+        <span class="nx">parent</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nx">children</span><span class="o">:</span> <span class="p">[]</span>
+    <span class="p">};</span>
+    <span class="kd">var</span> <span class="nx">exports</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">;</span>
+    <span class="cm">/* ==  Begin source for module /bar.js  == */</span>
+    <span class="kd">var</span> <span class="nx">__module__</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+        <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./dir/foo'</span><span class="p">);</span>
+
+        <span class="nx">exports</span><span class="p">.</span><span class="nx">doTheThing</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">foo</span><span class="p">();</span>
+        <span class="p">};</span>
+
+    <span class="p">};</span> <span class="cm">/* ==  End source for module /bar.js  == */</span>
+    <span class="nx">module</span><span class="p">.</span><span class="nx">require</span> <span class="o">=</span> <span class="nx">require</span><span class="p">.</span><span class="nx">_bind</span><span class="p">(</span><span class="nx">module</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">module</span><span class="p">;</span>
+<span class="p">}());;</span>
+</pre></div>
+
+<p>Once your modules are compiled, you add in the very tiny <code>common.js</code> client library which defines the <code>require</code> function and contains the rules for resolving modules. And that's it.</p>
+
+<p>It should be noted that this is a 100% synchronous process, which means any module you intend to require has to loaded in the DOM <em>before</em> the <code>require</code> call is made.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Common.js maintained by <a href="https://github.com/UmbraEngineering">UmbraEngineering</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
