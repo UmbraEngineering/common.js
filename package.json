@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/UmbraEngineering/commonjs.js.git"
+    "url": "git://github.com/UmbraEngineering/common.js.git"
   },
   "keywords": [
     "commonjs",
