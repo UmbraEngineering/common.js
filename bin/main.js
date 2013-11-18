@@ -2,10 +2,9 @@
 
 var program   = require('commander');
 var commonjs  = require('../lib/index');
-var pkg       = require('pkg').read(module);
 
 program
-	.version(pkg.version())
+	.version('0.0.3')
 	.option('-s, --src [src]', 'Source directory')
 	.option('-d, --dest [dest]', 'Destination directory')
 	.option('-v, --verbose', 'Verbose output')
