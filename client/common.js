@@ -16,6 +16,9 @@
 	// 
 	var require = window.require = function(file, from) {
 		var module = require.lookup(file, from);
+		if (! module) {
+			throw new Error('Cannot find module "' + file + '"');
+		}
 		if (from) {
 			from.children.push(module);
 		}
@@ -53,6 +56,10 @@
 	// @param {from} the module requesting the resolve
 	// 
 	require.resolve = function(file, from) {
+		if (file.slice(-3) !== '.js') {
+			file += '.js';
+		}
+
 		switch (file.charAt(0)) {
 			// Absolute path (relative to given JavaScript root directory)
 			//   eg. require('/module');
@@ -76,7 +83,7 @@
 					}
 				}
 
-				file = '/' + segments.join('/');
+				file = segments.join('/');
 				return require.exists(file) ? file : null;
 			break;
 			
