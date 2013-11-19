@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"on",
+				"onreadystatechange"
+			],
+			[
+				"create",
+				"createScript"
+			],
+			[
+				"start",
+				"startWaiting"
+			],
+			[
+				"waiting",
+				"waitingTimeout"
+			],
+			[
 				"module",
 				"modulePath"
 			],
@@ -67,7 +83,15 @@
 			"file": "client/common.js",
 			"settings":
 			{
-				"buffer_size": 4153,
+				"buffer_size": 6752,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "readme.md",
+			"settings":
+			{
+				"buffer_size": 1024,
 				"line_ending": "Unix"
 			}
 		}
@@ -167,7 +191,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -249,7 +273,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -288,15 +312,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4153,
+						"buffer_size": 6752,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2467,
-								2467
+								3786,
+								3786
 							]
 						],
 						"settings":
@@ -305,7 +329,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1386.0,
+						"translation.y": 2820.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "readme.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1012,
+								1012
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
