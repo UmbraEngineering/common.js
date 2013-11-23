@@ -78,6 +78,14 @@
 				"buffer_size": 1024,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "client/common.js",
+			"settings":
+			{
+				"buffer_size": 6752,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -107,8 +115,8 @@
 	},
 	"file_history":
 	[
-		"/home/james/Desktop/projects/umbra/commonjs/client/common.js",
 		"/home/james/Desktop/projects/umbra/commonjs/lib/wrap-module.js",
+		"/home/james/Desktop/projects/umbra/commonjs/client/common.js",
 		"/home/james/Desktop/commonjs-sandbox/js/bar.js",
 		"/home/james/Desktop/projects/umbra/commonjs/readme.md",
 		"/home/james/Desktop/projects/umbra/commonjs/package.json",
@@ -177,7 +185,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -286,6 +294,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/common.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6752,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6280,
+								6280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4482.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
