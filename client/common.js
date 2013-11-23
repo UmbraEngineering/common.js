@@ -89,8 +89,8 @@
 			case '.':
 				file = file.split('/');
 				
-				var dir = from ? from.dirname : '/';
-				var segments = dir.split('/').slice(1);
+				var dir = from ? from.dirname : '';
+				var segments = dir.split('/');
 				
 				for (var i = 0, c = file.length; i < c; i++) {
 					switch (file[i]) {
