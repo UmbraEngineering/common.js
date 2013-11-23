@@ -72,14 +72,6 @@
 			}
 		},
 		{
-			"file": "client/common.js",
-			"settings":
-			{
-				"buffer_size": 6752,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "readme.md",
 			"settings":
 			{
@@ -115,6 +107,7 @@
 	},
 	"file_history":
 	[
+		"/home/james/Desktop/projects/umbra/commonjs/client/common.js",
 		"/home/james/Desktop/projects/umbra/commonjs/lib/wrap-module.js",
 		"/home/james/Desktop/commonjs-sandbox/js/bar.js",
 		"/home/james/Desktop/projects/umbra/commonjs/readme.md",
@@ -184,7 +177,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -272,34 +265,6 @@
 				},
 				{
 					"buffer": 3,
-					"file": "client/common.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6752,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3786,
-								3786
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2820.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "readme.md",
 					"semi_transient": false,
 					"settings":
@@ -320,7 +285,7 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 594.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
