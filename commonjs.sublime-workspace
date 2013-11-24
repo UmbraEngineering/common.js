@@ -83,7 +83,7 @@
 			"file": "client/common.js",
 			"settings":
 			{
-				"buffer_size": 6752,
+				"buffer_size": 6742,
 				"line_ending": "Unix"
 			}
 		},
@@ -193,7 +193,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -312,15 +312,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6752,
+						"buffer_size": 6742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6280,
-								6280
+								2320,
+								2320
 							]
 						],
 						"settings":
@@ -329,7 +329,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4482.0,
+						"translation.y": 1458.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -357,7 +357,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 162.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
