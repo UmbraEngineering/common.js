@@ -19,7 +19,11 @@
 	var require = window.require = function(file, from) {
 		var module = require.lookup(file, from);
 		if (! module) {
-			throw new Error('Cannot find module "' + file + '"');
+			var msg = 'Cannot find module "' + file + '"';
+			if (from && from.filename) {
+				msg += ' in file "' + from.filename +  '"';
+			}
+			throw new Error(msg);
 		}
 		if (from) {
 			from.children.push(module);
