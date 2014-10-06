@@ -1,6 +1,6 @@
 {
   "name": "common.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A CommonJS preprocessor and client-side lib",
   "main": "lib/index.js",
   "bin": {
